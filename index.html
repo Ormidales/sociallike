@@ -1,0 +1,578 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>SOCIALLIKE</title>
+  <meta name="description" content="SOCIALLIKE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <meta name="theme-color" content="#fafafa">
+
+  <!-- Importation de TailwindCSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+
+  <style>
+
+    :root {
+      --bg-color: rgb(20, 20, 20);
+      --card-color: rgb(23, 23, 23);
+    }
+
+    body {
+      align-items: center;
+      background-color: var(--bg-color);
+      display: flex;
+      height: 100vh;
+      justify-content: center;
+      margin: 0px;
+      overflow: hidden;
+      padding: 0px;
+    }
+
+    #cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      max-width: 916px;
+      width: calc(100% - 20px);
+    }
+
+    #cards:hover > .card::after {
+      opacity: 1;
+    }
+
+    .card {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      cursor: pointer;
+      display: flex;
+      height: 260px;
+      flex-direction: column;
+      position: relative;
+      width: 300px;
+    }
+
+    .card:hover::before {
+      opacity: 1;
+    }
+
+    .card::before,
+    .card::after {
+      border-radius: inherit;
+      content: "";
+      height: 100%;
+      left: 0px;
+      opacity: 0;
+      position: absolute;
+      top: 0px;
+      transition: opacity 500ms;
+      width: 100%;
+    }
+
+    .card::before {
+      background: radial-gradient(
+        800px circle at var(--mouse-x) var(--mouse-y),
+        rgba(255, 255, 255, 0.06),
+        transparent 40%
+      );
+      z-index: 3;
+    }
+
+    .card::after {
+      background: radial-gradient(
+        600px circle at var(--mouse-x) var(--mouse-y),
+        rgba(255, 255, 255, 0.4),
+        transparent 40%
+      );
+      z-index: 1;
+    }
+
+    .card > .card-content {
+      background-color: var(--card-color);
+      border-radius: inherit;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      inset: 1px;
+      padding: 10px;
+      position: absolute;
+      z-index: 2;
+    }
+
+    /* -- ↓ ↓ ↓ extra card content styles ↓ ↓ ↓ -- */
+
+    h1, h2, h3, h4, span {
+      color: rgb(240, 240, 240);
+      font-family: "Rubik", sans-serif;
+      font-weight: 400;
+      margin: 0px;
+    }
+
+    i {
+      color: rgb(240, 240, 240);
+    }
+
+    .card-image {
+      align-items: center;
+      display: flex;
+      height: 140px;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .card-image > i {
+      font-size: 6em;
+      opacity: 0.25;
+    }
+
+    .card-info-wrapper {
+      align-items: center;
+      display: flex;
+      flex-grow: 1;
+      justify-content: flex-start;
+      padding: 0px 20px;
+    }
+
+    .card-info {
+      align-items: flex-start;
+      display: flex;
+      gap: 10px;
+    }
+
+    .card-info > i {
+      font-size: 1em;
+      height: 20px;
+      line-height: 20px;
+    }
+
+    .card-info-title > h3 {
+      font-size: 1.1em;
+      line-height: 20px;
+    }
+
+    .card-info-title > h4 {
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 0.85em;
+      margin-top: 8px;
+    }
+
+    /* -- ↓ ↓ ↓ some responsiveness ↓ ↓ ↓ -- */
+
+    @media(max-width: 1000px) {
+      body {
+        align-items: flex-start;
+        overflow: auto;
+      }
+
+      #cards {
+        max-width: 1000px;
+        padding: 10px 0px;
+      }
+
+      .card {
+        flex-shrink: 1;
+        width: calc(50% - 4px);
+      }
+    }
+
+    @media(max-width: 500px) {
+      .card {
+        height: 180px;
+      }
+
+      .card-image {
+        height: 80px;
+      }
+
+      .card-image > i {
+        font-size: 3em;
+      }
+
+      .card-info-wrapper {
+        padding: 0px 10px;
+      }
+
+      .card-info > i {
+        font-size: 0.8em;
+      }
+
+      .card-info-title > h3 {
+        font-size: 0.9em;
+      }
+
+      .card-info-title > h4 {
+        font-size: 0.8em;
+        margin-top: 4px;
+      }
+    }
+
+    @media(max-width: 320px) {
+      .card {
+        width: 100%;
+      }
+    }
+
+  </style>
+</head>
+
+<body style="font-family: Nunito, sans-serif;">
+
+<div id="cards">
+  <div class="card">
+    <div class="card-content">
+      <div class="card-image">
+        <i class="fa-duotone fa-apartment"></i>
+      </div>
+      <div class="card-info-wrapper">
+        <div class="card-info">
+          <i class="fa-duotone fa-apartment"></i>
+          <div class="card-info-title">
+            <h3>Apartments</h3>
+            <h4>Places to be apart. Wait, what?</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-content">
+      <div class="card-image">
+        <i class="fa-duotone fa-unicorn"></i>
+      </div>
+      <div class="card-info-wrapper">
+        <div class="card-info">
+          <i class="fa-duotone fa-unicorn"></i>
+          <div class="card-info-title">
+            <h3>Unicorns</h3>
+            <h4>A single corn. Er, I mean horn.</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-content">
+      <div class="card-image">
+        <i class="fa-duotone fa-blender-phone"></i>
+      </div>
+      <div class="card-info-wrapper">
+        <div class="card-info">
+          <i class="fa-duotone fa-blender-phone"></i>
+          <div class="card-info-title">
+            <h3>Blender Phones</h3>
+            <h4>These absolutely deserve to exist.</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-content">
+      <div class="card-image">
+        <i class="fa-duotone fa-person-to-portal"></i>
+      </div>
+      <div class="card-info-wrapper">
+        <div class="card-info">
+          <i class="fa-duotone fa-person-to-portal"></i>
+          <div class="card-info-title">
+            <h3>Adios</h3>
+            <h4>See you...</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-content">
+      <div class="card-image">
+        <i class="fa-duotone fa-person-from-portal"></i>
+      </div>
+      <div class="card-info-wrapper">
+        <div class="card-info">
+          <i class="fa-duotone fa-person-from-portal"></i>
+          <div class="card-info-title">
+            <h3>I mean hello</h3>
+            <h4>...over here.</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-content">
+      <div class="card-image">
+        <i class="fa-duotone fa-otter"></i>
+      </div>
+      <div class="card-info-wrapper">
+        <div class="card-info">
+          <i class="fa-duotone fa-otter"></i>
+          <div class="card-info-title">
+            <h3>Otters</h3>
+            <h4>Look at me, imma cute lil fella.</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!--<div class="w-full flex item-center gap-6 bg-zinc-900 p-10">
+
+    <div class="group w-[30vh] h-[40vh] border border-zinc-600 bg-[url('https://www.france.tv/image/vignette_3x4/300/400/6/k/r/d8dff669-phpnukrk6.jpg')] bg-center bg-cover overflow-hidden hover:scale-110 transition ease-in-out duration-300">
+
+      <div class="w-full h-[100%] bg-gradient-to-t from-zinc-900/95 via-zinc-900/75 to-zinc-900/25 opacity-0 group-hover:opacity-100 transition-opacity ease-in-out">
+
+        <div class="relative w-full h-[100%]">
+
+          <div class="absolute bottom-0 left-0 w-full px-4 py-6">
+
+            <p class="text-white text-[15px] font-bold">Direct TV - Étape 2 : Vitoria-Gasteiz > San Sebastian</p>
+
+            <p class="mt-1 text-white text-[12px]">Deuxième étape du Tour de France 2023, avec une étape espagnole reliant Vitoria-Gasteiz...</p>
+
+            <p class="mt-1 mb-5 text-gray-300 text-[11px]">Diffusé le 02/07/23 | 4 h 55 min</p>
+
+            <span class="px-3 py-1 text-zinc-900 text-[14px] bg-white rounded-full">Regarder</span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="group w-[30vh] h-[40vh] border border-zinc-600 bg-[url('https://www.france.tv/image/vignette_3x4/300/400/y/l/h/02e301ce-phpeuihly.jpg')] bg-center bg-cover overflow-hidden hover:scale-110 transition ease-in-out duration-300">
+
+      <div class="w-full h-[100%] bg-gradient-to-t from-zinc-900/95 via-zinc-900/75 to-zinc-900/25 opacity-0 group-hover:opacity-100 transition ease-in-out">
+
+        <div class="relative w-full h-[100%]">
+
+          <div class="absolute bottom-0 left-0 w-full px-4 py-6">
+
+            <p class="text-white text-[15px] font-bold">Les sprinteurs enfin à l'honneur pour le retour en France ? La troisième étape en questions</p>
+
+            <p class="mt-1 text-white text-[12px]">Le peloton de la 110e édition de la Grande Boucle arrive en France, lundi. Après...</p>
+
+            <p class="mt-1 mb-5 text-gray-300 text-[11px]">Publié le 03/07/23</p>
+
+            <span class="px-3 py-1 text-zinc-900 text-[14px] bg-white rounded-full">Lire</span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="group w-[30vh] h-[40vh] border border-zinc-600 bg-[url('https://www.france.tv/image/vignette_3x4/300/400/e/e/s/119417fa-phpyt0see.jpg')] bg-center bg-cover overflow-hidden hover:scale-110 transition ease-in-out duration-300">
+
+      <div class="w-full h-[100%] bg-gradient-to-t from-zinc-900/95 via-zinc-900/75 to-zinc-900/25 opacity-0 group-hover:opacity-100 transition ease-in-out">
+
+        <div class="relative w-full h-[100%]">
+
+          <div class="absolute bottom-0 left-0 w-full px-4 py-6">
+
+            <p class="text-white text-[15px] font-bold">Qui est Victor Lafay, le Français qui a brisé la malédiction de l'équipe Cofidis ?</p>
+
+            <p class="mt-1 text-white text-[12px]">Le puncheur a décroché sa première victoire sur le Tour, dimanche, à Saint-Sébastien,...</p>
+
+            <p class="mt-1 mb-5 text-gray-300 text-[11px]">Publié le 02/07/23</p>
+
+            <span class="px-3 py-1 text-zinc-900 text-[14px] bg-white rounded-full">Lire</span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>-->
+
+  <!--<div class="w-full flex item-center gap-6 bg-zinc-900 p-10">
+
+    <div class="group w-[30vh] h-[40vh] border border-zinc-600 bg-[url('https://www.france.tv/image/vignette_3x4/300/400/6/k/r/d8dff669-phpnukrk6.jpg')] bg-center bg-cover overflow-hidden hover:-translate-y-5 transition ease-in-out duration-300">
+
+      <div class="w-full h-[100%] bg-gradient-to-t from-zinc-900/95 via-zinc-900/75 to-zinc-900/25 opacity-0 group-hover:opacity-100 transition-opacity ease-in-out">
+
+        <div class="relative w-full h-[100%]">
+
+          <div class="absolute bottom-0 left-0 w-full px-4 py-6">
+
+            <p class="text-white text-[15px] font-bold">Direct TV - Étape 2 : Vitoria-Gasteiz > San Sebastian</p>
+
+            <p class="mt-1 text-white text-[12px]">Deuxième étape du Tour de France 2023, avec une étape espagnole reliant Vitoria-Gasteiz...</p>
+
+            <p class="mt-1 mb-5 text-gray-300 text-[11px]">Diffusé le 02/07/23 | 4 h 55 min</p>
+
+            <span class="px-3 py-1 text-zinc-900 text-[14px] bg-white rounded-full">Regarder</span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="group w-[30vh] h-[40vh] border border-zinc-600 bg-[url('https://www.france.tv/image/vignette_3x4/300/400/y/l/h/02e301ce-phpeuihly.jpg')] bg-center bg-cover overflow-hidden hover:-translate-y-5 transition ease-in-out duration-300">
+
+      <div class="w-full h-[100%] bg-gradient-to-t from-zinc-900/95 via-zinc-900/75 to-zinc-900/25 opacity-0 group-hover:opacity-100 transition ease-in-out">
+
+        <div class="relative w-full h-[100%]">
+
+          <div class="absolute bottom-0 left-0 w-full px-4 py-6">
+
+            <p class="text-white text-[15px] font-bold">Les sprinteurs enfin à l'honneur pour le retour en France ? La troisième étape en questions</p>
+
+            <p class="mt-1 text-white text-[12px]">Le peloton de la 110e édition de la Grande Boucle arrive en France, lundi. Après...</p>
+
+            <p class="mt-1 mb-5 text-gray-300 text-[11px]">Publié le 03/07/23</p>
+
+            <span class="px-3 py-1 text-zinc-900 text-[14px] bg-white rounded-full">Lire</span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="group w-[30vh] h-[40vh] border border-zinc-600 bg-[url('https://www.france.tv/image/vignette_3x4/300/400/e/e/s/119417fa-phpyt0see.jpg')] bg-center bg-cover overflow-hidden hover:-translate-y-5 transition ease-in-out duration-300">
+
+      <div class="w-full h-[100%] bg-gradient-to-t from-zinc-900/95 via-zinc-900/75 to-zinc-900/25 opacity-0 group-hover:opacity-100 transition ease-in-out">
+
+        <div class="relative w-full h-[100%]">
+
+          <div class="absolute bottom-0 left-0 w-full px-4 py-6">
+
+            <p class="text-white text-[15px] font-bold">Qui est Victor Lafay, le Français qui a brisé la malédiction de l'équipe Cofidis ?</p>
+
+            <p class="mt-1 text-white text-[12px]">Le puncheur a décroché sa première victoire sur le Tour, dimanche, à Saint-Sébastien,...</p>
+
+            <p class="mt-1 mb-5 text-gray-300 text-[11px]">Publié le 02/07/23</p>
+
+            <span class="px-3 py-1 text-zinc-900 text-[14px] bg-white rounded-full">Lire</span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>-->
+
+  <!--<div class="w-full flex item-center gap-6 bg-zinc-900 p-10">
+
+    <div class="group w-[30vh] h-[40vh] border border-zinc-600 shadow-xl hover:shadow-yellow-500/10 bg-[url('https://www.france.tv/image/vignette_3x4/300/400/6/k/r/d8dff669-phpnukrk6.jpg')] bg-center bg-cover overflow-hidden hover:scale-110 transition ease-in-out duration-300">
+
+      <div class="w-full h-[100%] bg-gradient-to-t from-zinc-900/95 via-zinc-900/75 to-zinc-900/25 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity ease-in-out">
+
+        <div class="relative w-full h-[100%] pattern-boxes pattern-yellow-500 pattern-bg-white
+  pattern-size-4 pattern-opacity-10">
+
+          <div class="absolute bottom-0 left-0 w-full px-4 py-6">
+
+            <p class="text-white text-[15px] font-bold">Direct TV - Étape 2 : Vitoria-Gasteiz > San Sebastian</p>
+
+            <p class="mt-1 text-white text-[12px]">Deuxième étape du Tour de France 2023, avec une étape espagnole reliant Vitoria-Gasteiz...</p>
+
+            <p class="mt-1 mb-5 text-gray-300 text-[11px]">Diffusé le 02/07/23 | 4 h 55 min</p>
+
+            <span class="px-3 py-1 text-zinc-900 text-[14px] bg-white rounded-full">Regarder</span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="group w-[30vh] h-[40vh] border border-zinc-600 shadow-xl hover:shadow-yellow-500/10 bg-[url('https://www.france.tv/image/vignette_3x4/300/400/y/l/h/02e301ce-phpeuihly.jpg')] bg-center bg-cover overflow-hidden hover:scale-110 transition ease-in-out duration-300">
+
+      <div class="w-full h-[100%] bg-gradient-to-t from-zinc-900/95 via-zinc-900/75 to-zinc-900/25 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition ease-in-out">
+
+        <div class="relative w-full h-[100%]">
+
+          <div class="absolute bottom-0 left-0 w-full px-4 py-6">
+
+            <p class="text-white text-[15px] font-bold">Les sprinteurs enfin à l'honneur pour le retour en France ? La troisième étape en questions</p>
+
+            <p class="mt-1 text-white text-[12px]">Le peloton de la 110e édition de la Grande Boucle arrive en France, lundi. Après...</p>
+
+            <p class="mt-1 mb-5 text-gray-300 text-[11px]">Publié le 03/07/23</p>
+
+            <span class="px-3 py-1 text-zinc-900 text-[14px] bg-white rounded-full">Lire</span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="group w-[30vh] h-[40vh] border border-zinc-600 shadow-xl hover:shadow-yellow-500/10 bg-[url('https://www.france.tv/image/vignette_3x4/300/400/e/e/s/119417fa-phpyt0see.jpg')] bg-center bg-cover overflow-hidden hover:scale-110 transition ease-in-out duration-300">
+
+      <div class="w-full h-[100%] bg-gradient-to-t from-zinc-900/95 via-zinc-900/75 to-zinc-900/25 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition ease-in-out">
+
+        <div class="relative w-full h-[100%]">
+
+          <div class="absolute bottom-0 left-0 w-full px-4 py-6">
+
+            <p class="text-white text-[15px] font-bold">Qui est Victor Lafay, le Français qui a brisé la malédiction de l'équipe Cofidis ?</p>
+
+            <p class="mt-1 text-white text-[12px]">Le puncheur a décroché sa première victoire sur le Tour, dimanche, à Saint-Sébastien,...</p>
+
+            <p class="mt-1 mb-5 text-gray-300 text-[11px]">Publié le 02/07/23</p>
+
+            <span class="px-3 py-1 text-zinc-900 text-[14px] bg-white rounded-full">Lire</span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>-->
+
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+
+</body>
+
+</html>
