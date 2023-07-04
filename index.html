@@ -35,17 +35,6 @@
       --card-color: rgb(23, 23, 23);
     }
 
-    body {
-      align-items: center;
-      background-color: var(--bg-color);
-      display: flex;
-      height: 100vh;
-      justify-content: center;
-      margin: 0px;
-      overflow: hidden;
-      padding: 0px;
-    }
-
     #cards {
       display: flex;
       flex-wrap: wrap;
@@ -234,7 +223,7 @@
 
 <body style="font-family: Nunito, sans-serif;">
 
-<div id="cards">
+<!--<div id="cards">
   <div class="card">
     <div class="card-content">
       <div class="card-image">
@@ -244,14 +233,14 @@
         <div class="card-info">
           <i class="fa-duotone fa-apartment"></i>
           <div class="card-info-title">
-            <h3>Apartments</h3>
-            <h4>Places to be apart. Wait, what?</h4>
+            <h3>Projets</h3>
+            <h4>Envie de voir sur quels projets j'ai travaillé dur, cliqué ici !</h4>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="card">
+  <div class="card group">
     <div class="card-content">
       <div class="card-image">
         <i class="fa-duotone fa-unicorn"></i>
@@ -260,7 +249,7 @@
         <div class="card-info">
           <i class="fa-duotone fa-unicorn"></i>
           <div class="card-info-title">
-            <h3>Unicorns</h3>
+            <h3>Alternance</h3>
             <h4>A single corn. Er, I mean horn.</h4>
           </div>
         </div>
@@ -331,27 +320,101 @@
       </div>
     </div>
   </div>
+</div>-->
+
+<div class="w-full flex item-center gap-6 bg-zinc-900 p-10">
+
+  <div class="group w-[30vh] h-[40vh] border border-zinc-600 bg-[url('https://www.france.tv/image/vignette_3x4/300/400/6/k/r/d8dff669-phpnukrk6.jpg')] bg-center bg-cover overflow-hidden hover:scale-110 transition ease-in-out duration-300">
+
+    <div class="w-full h-[100%] bg-gradient-to-t from-zinc-900/95 via-zinc-900/75 to-zinc-900/10 opacity-0 group-hover:opacity-100 transition-opacity ease-in-out">
+
+      <div class="relative w-full h-[100%]">
+
+        <div class="absolute bottom-0 left-0 w-full px-4 py-6">
+
+          <p style="transform: translateZ(20px);" class="text-white text-[15px] font-bold">Direct TV - Étape 2 : Vitoria-Gasteiz > San Sebastian</p>
+
+          <p class="mt-1 text-white text-[12px]">Deuxième étape du Tour de France 2023, avec une étape espagnole reliant Vitoria-Gasteiz...</p>
+
+          <p class="mt-1 mb-5 text-gray-300 text-[11px]">Diffusé le 02/07/23 | 4 h 55 min</p>
+
+          <a href="#"><div class="mt-3 w-full px-3 py-1 border border-zinc-900 flex items-center justify-center bg-white text-zinc-900 text-[14px] hover:bg-zinc-900 hover:text-white hover:border-white transition-all">Regarder</div></a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="group w-[30vh] h-[40vh] border border-zinc-600 bg-[url('https://www.france.tv/image/vignette_3x4/300/400/y/l/h/02e301ce-phpeuihly.jpg')] bg-center bg-cover overflow-hidden hover:scale-110 transition ease-in-out duration-300">
+
+    <div class="w-full h-[100%] bg-gradient-to-t from-zinc-900/95 via-zinc-900/75 to-zinc-900/10 opacity-0 group-hover:opacity-100 transition ease-in-out">
+
+      <div class="relative w-full h-[100%]">
+
+        <div class="absolute bottom-0 left-0 w-full px-4 py-6">
+
+          <p class="text-white text-[15px] font-bold">Les sprinteurs enfin à l'honneur pour le retour en France ? La troisième étape en questions</p>
+
+          <p class="mt-1 text-white text-[12px]">Le peloton de la 110e édition de la Grande Boucle arrive en France, lundi. Après...</p>
+
+          <p class="mt-1 mb-5 text-gray-300 text-[11px]">Publié le 03/07/23</p>
+
+          <a href="#"><div class="mt-3 w-full px-3 py-1 border border-zinc-900 flex items-center justify-center bg-white text-zinc-900 text-[14px] hover:bg-zinc-900 hover:text-white hover:border-white transition-all">Regarder</div></a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="group w-[30vh] h-[40vh] border border-zinc-600 bg-[url('https://www.france.tv/image/vignette_3x4/300/400/e/e/s/119417fa-phpyt0see.jpg')] bg-center bg-cover overflow-hidden hover:scale-110 transition ease-in-out duration-300">
+
+    <div class="w-full h-[100%] bg-gradient-to-t from-zinc-900/95 via-zinc-900/75 to-zinc-900/10 opacity-0 group-hover:opacity-100 transition ease-in-out">
+
+      <div class="relative w-full h-[100%]">
+
+        <div class="absolute bottom-0 left-0 w-full px-4 py-6">
+
+          <p class="text-white text-[15px] font-bold">Qui est Victor Lafay, le Français qui a brisé la malédiction de l'équipe Cofidis ?</p>
+
+          <p class="mt-1 text-white text-[12px]">Le puncheur a décroché sa première victoire sur le Tour, dimanche, à Saint-Sébastien,...</p>
+
+          <p class="mt-1 mb-5 text-gray-300 text-[11px]">Publié le 02/07/23</p>
+
+          <a href="#"><div class="mt-3 w-full px-3 py-1 border border-zinc-900 flex items-center justify-center bg-white text-zinc-900 text-[14px] hover:bg-zinc-900 hover:text-white hover:border-white transition-all">Regarder</div></a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
 </div>
 
-  <!--<div class="w-full flex item-center gap-6 bg-zinc-900 p-10">
+<div class="w-full flex item-center gap-6 bg-zinc-900 p-10">
 
-    <div class="group w-[30vh] h-[40vh] border border-zinc-600 bg-[url('https://www.france.tv/image/vignette_3x4/300/400/6/k/r/d8dff669-phpnukrk6.jpg')] bg-center bg-cover overflow-hidden hover:scale-110 transition ease-in-out duration-300">
+  <div class="group w-[30vh] h-[40vh] border border-zinc-600 bg-[url('https://www.france.tv/image/vignette_3x4/300/400/6/k/r/d8dff669-phpnukrk6.jpg')] bg-center bg-cover overflow-hidden hover:-translate-y-3 transition ease-in-out duration-300">
 
-      <div class="w-full h-[100%] bg-gradient-to-t from-zinc-900/95 via-zinc-900/75 to-zinc-900/25 opacity-0 group-hover:opacity-100 transition-opacity ease-in-out">
+    <div class="w-full h-[100%] bg-gradient-to-t from-zinc-900/95 via-zinc-900/75 to-zinc-900/10 opacity-0 group-hover:opacity-100 transition-opacity ease-in-out">
 
-        <div class="relative w-full h-[100%]">
+      <div class="relative w-full h-[100%]">
 
-          <div class="absolute bottom-0 left-0 w-full px-4 py-6">
+        <div class="absolute bottom-0 left-0 w-full px-4 py-6">
 
-            <p class="text-white text-[15px] font-bold">Direct TV - Étape 2 : Vitoria-Gasteiz > San Sebastian</p>
+          <p class="text-white text-[15px] font-bold">Direct TV - Étape 2 : Vitoria-Gasteiz > San Sebastian</p>
 
-            <p class="mt-1 text-white text-[12px]">Deuxième étape du Tour de France 2023, avec une étape espagnole reliant Vitoria-Gasteiz...</p>
+          <p class="mt-1 text-white text-[12px]">Deuxième étape du Tour de France 2023, avec une étape espagnole reliant Vitoria-Gasteiz...</p>
 
-            <p class="mt-1 mb-5 text-gray-300 text-[11px]">Diffusé le 02/07/23 | 4 h 55 min</p>
+          <p class="mt-1 mb-5 text-gray-300 text-[11px]">Diffusé le 02/07/23 | 4 h 55 min</p>
 
-            <span class="px-3 py-1 text-zinc-900 text-[14px] bg-white rounded-full">Regarder</span>
-
-          </div>
+          <a href="#"><div class="mt-3 w-full px-3 py-1 border border-zinc-900 flex items-center justify-center bg-white text-zinc-900 text-[14px] hover:bg-zinc-900 hover:text-white hover:border-white transition-all">Regarder</div></a>
 
         </div>
 
@@ -359,47 +422,23 @@
 
     </div>
 
-    <div class="group w-[30vh] h-[40vh] border border-zinc-600 bg-[url('https://www.france.tv/image/vignette_3x4/300/400/y/l/h/02e301ce-phpeuihly.jpg')] bg-center bg-cover overflow-hidden hover:scale-110 transition ease-in-out duration-300">
+  </div>
 
-      <div class="w-full h-[100%] bg-gradient-to-t from-zinc-900/95 via-zinc-900/75 to-zinc-900/25 opacity-0 group-hover:opacity-100 transition ease-in-out">
+  <div class="group w-[30vh] h-[40vh] border border-zinc-600 bg-[url('https://www.france.tv/image/vignette_3x4/300/400/y/l/h/02e301ce-phpeuihly.jpg')] bg-center bg-cover overflow-hidden hover:-translate-y-3 transition ease-in-out duration-300">
 
-        <div class="relative w-full h-[100%]">
+    <div class="w-full h-[100%] bg-gradient-to-t from-zinc-900/95 via-zinc-900/75 to-zinc-900/10 opacity-0 group-hover:opacity-100 transition ease-in-out">
 
-          <div class="absolute bottom-0 left-0 w-full px-4 py-6">
+      <div class="relative w-full h-[100%]">
 
-            <p class="text-white text-[15px] font-bold">Les sprinteurs enfin à l'honneur pour le retour en France ? La troisième étape en questions</p>
+        <div class="absolute bottom-0 left-0 w-full px-4 py-6">
 
-            <p class="mt-1 text-white text-[12px]">Le peloton de la 110e édition de la Grande Boucle arrive en France, lundi. Après...</p>
+          <p class="text-white text-[15px] font-bold">Les sprinteurs enfin à l'honneur pour le retour en France ? La troisième étape en questions</p>
 
-            <p class="mt-1 mb-5 text-gray-300 text-[11px]">Publié le 03/07/23</p>
+          <p class="mt-1 text-white text-[12px]">Le peloton de la 110e édition de la Grande Boucle arrive en France, lundi. Après...</p>
 
-            <span class="px-3 py-1 text-zinc-900 text-[14px] bg-white rounded-full">Lire</span>
+          <p class="mt-1 mb-5 text-gray-300 text-[11px]">Publié le 03/07/23</p>
 
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-    <div class="group w-[30vh] h-[40vh] border border-zinc-600 bg-[url('https://www.france.tv/image/vignette_3x4/300/400/e/e/s/119417fa-phpyt0see.jpg')] bg-center bg-cover overflow-hidden hover:scale-110 transition ease-in-out duration-300">
-
-      <div class="w-full h-[100%] bg-gradient-to-t from-zinc-900/95 via-zinc-900/75 to-zinc-900/25 opacity-0 group-hover:opacity-100 transition ease-in-out">
-
-        <div class="relative w-full h-[100%]">
-
-          <div class="absolute bottom-0 left-0 w-full px-4 py-6">
-
-            <p class="text-white text-[15px] font-bold">Qui est Victor Lafay, le Français qui a brisé la malédiction de l'équipe Cofidis ?</p>
-
-            <p class="mt-1 text-white text-[12px]">Le puncheur a décroché sa première victoire sur le Tour, dimanche, à Saint-Sébastien,...</p>
-
-            <p class="mt-1 mb-5 text-gray-300 text-[11px]">Publié le 02/07/23</p>
-
-            <span class="px-3 py-1 text-zinc-900 text-[14px] bg-white rounded-full">Lire</span>
-
-          </div>
+          <a href="#"><div class="mt-3 w-full px-3 py-1 border border-zinc-900 flex items-center justify-center bg-white text-zinc-900 text-[14px] hover:bg-zinc-900 hover:text-white hover:border-white transition-all">Regarder</div></a>
 
         </div>
 
@@ -407,27 +446,23 @@
 
     </div>
 
-  </div>-->
+  </div>
 
-  <!--<div class="w-full flex item-center gap-6 bg-zinc-900 p-10">
+  <div class="group w-[30vh] h-[40vh] border border-zinc-600 bg-[url('https://www.france.tv/image/vignette_3x4/300/400/e/e/s/119417fa-phpyt0see.jpg')] bg-center bg-cover overflow-hidden hover:-translate-y-3 transition ease-in-out duration-300">
 
-    <div class="group w-[30vh] h-[40vh] border border-zinc-600 bg-[url('https://www.france.tv/image/vignette_3x4/300/400/6/k/r/d8dff669-phpnukrk6.jpg')] bg-center bg-cover overflow-hidden hover:-translate-y-5 transition ease-in-out duration-300">
+    <div class="w-full h-[100%] bg-gradient-to-t from-zinc-900/95 via-zinc-900/75 to-zinc-900/10 opacity-0 group-hover:opacity-100 transition ease-in-out">
 
-      <div class="w-full h-[100%] bg-gradient-to-t from-zinc-900/95 via-zinc-900/75 to-zinc-900/25 opacity-0 group-hover:opacity-100 transition-opacity ease-in-out">
+      <div class="relative w-full h-[100%]">
 
-        <div class="relative w-full h-[100%]">
+        <div class="absolute bottom-0 left-0 w-full px-4 py-6">
 
-          <div class="absolute bottom-0 left-0 w-full px-4 py-6">
+          <p class="text-white text-[15px] font-bold">Qui est Victor Lafay, le Français qui a brisé la malédiction de l'équipe Cofidis ?</p>
 
-            <p class="text-white text-[15px] font-bold">Direct TV - Étape 2 : Vitoria-Gasteiz > San Sebastian</p>
+          <p class="mt-1 text-white text-[12px]">Le puncheur a décroché sa première victoire sur le Tour, dimanche, à Saint-Sébastien,...</p>
 
-            <p class="mt-1 text-white text-[12px]">Deuxième étape du Tour de France 2023, avec une étape espagnole reliant Vitoria-Gasteiz...</p>
+          <p class="mt-1 mb-5 text-gray-300 text-[11px]">Publié le 02/07/23</p>
 
-            <p class="mt-1 mb-5 text-gray-300 text-[11px]">Diffusé le 02/07/23 | 4 h 55 min</p>
-
-            <span class="px-3 py-1 text-zinc-900 text-[14px] bg-white rounded-full">Regarder</span>
-
-          </div>
+          <a href="#"><div class="mt-3 w-full px-3 py-1 border border-zinc-900 flex items-center justify-center bg-white text-zinc-900 text-[14px] hover:bg-zinc-900 hover:text-white hover:border-white transition-all">Regarder</div></a>
 
         </div>
 
@@ -435,47 +470,28 @@
 
     </div>
 
-    <div class="group w-[30vh] h-[40vh] border border-zinc-600 bg-[url('https://www.france.tv/image/vignette_3x4/300/400/y/l/h/02e301ce-phpeuihly.jpg')] bg-center bg-cover overflow-hidden hover:-translate-y-5 transition ease-in-out duration-300">
+  </div>
 
-      <div class="w-full h-[100%] bg-gradient-to-t from-zinc-900/95 via-zinc-900/75 to-zinc-900/25 opacity-0 group-hover:opacity-100 transition ease-in-out">
+</div>
 
-        <div class="relative w-full h-[100%]">
+<div class="w-full flex item-center gap-6 bg-zinc-900 p-10">
 
-          <div class="absolute bottom-0 left-0 w-full px-4 py-6">
+  <div class="group w-[30vh] h-[40vh] border border-zinc-600 shadow-xl hover:shadow-yellow-500/10 bg-[url('https://www.france.tv/image/vignette_3x4/300/400/6/k/r/d8dff669-phpnukrk6.jpg')] bg-center bg-cover overflow-hidden hover:scale-110 transition ease-in-out duration-300">
 
-            <p class="text-white text-[15px] font-bold">Les sprinteurs enfin à l'honneur pour le retour en France ? La troisième étape en questions</p>
+    <div class="w-full h-[100%] bg-gradient-to-t from-zinc-900/95 via-zinc-900/75 to-zinc-900/25 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity ease-in-out">
 
-            <p class="mt-1 text-white text-[12px]">Le peloton de la 110e édition de la Grande Boucle arrive en France, lundi. Après...</p>
+      <div class="relative w-full h-[100%] pattern-boxes pattern-yellow-500 pattern-bg-white
+pattern-size-4 pattern-opacity-10">
 
-            <p class="mt-1 mb-5 text-gray-300 text-[11px]">Publié le 03/07/23</p>
+        <div class="absolute bottom-0 left-0 w-full px-4 py-6">
 
-            <span class="px-3 py-1 text-zinc-900 text-[14px] bg-white rounded-full">Lire</span>
+          <p class="text-white text-[15px] font-bold">Direct TV - Étape 2 : Vitoria-Gasteiz > San Sebastian</p>
 
-          </div>
+          <p class="mt-1 text-white text-[12px]">Deuxième étape du Tour de France 2023, avec une étape espagnole reliant Vitoria-Gasteiz...</p>
 
-        </div>
+          <p class="mt-1 mb-5 text-gray-300 text-[11px]">Diffusé le 02/07/23 | 4 h 55 min</p>
 
-      </div>
-
-    </div>
-
-    <div class="group w-[30vh] h-[40vh] border border-zinc-600 bg-[url('https://www.france.tv/image/vignette_3x4/300/400/e/e/s/119417fa-phpyt0see.jpg')] bg-center bg-cover overflow-hidden hover:-translate-y-5 transition ease-in-out duration-300">
-
-      <div class="w-full h-[100%] bg-gradient-to-t from-zinc-900/95 via-zinc-900/75 to-zinc-900/25 opacity-0 group-hover:opacity-100 transition ease-in-out">
-
-        <div class="relative w-full h-[100%]">
-
-          <div class="absolute bottom-0 left-0 w-full px-4 py-6">
-
-            <p class="text-white text-[15px] font-bold">Qui est Victor Lafay, le Français qui a brisé la malédiction de l'équipe Cofidis ?</p>
-
-            <p class="mt-1 text-white text-[12px]">Le puncheur a décroché sa première victoire sur le Tour, dimanche, à Saint-Sébastien,...</p>
-
-            <p class="mt-1 mb-5 text-gray-300 text-[11px]">Publié le 02/07/23</p>
-
-            <span class="px-3 py-1 text-zinc-900 text-[14px] bg-white rounded-full">Lire</span>
-
-          </div>
+          <span class="px-3 py-1 text-zinc-900 text-[14px] bg-white rounded-full">Regarder</span>
 
         </div>
 
@@ -483,28 +499,23 @@
 
     </div>
 
-  </div>-->
+  </div>
 
-  <!--<div class="w-full flex item-center gap-6 bg-zinc-900 p-10">
+  <div class="group w-[30vh] h-[40vh] border border-zinc-600 shadow-xl hover:shadow-yellow-500/10 bg-[url('https://www.france.tv/image/vignette_3x4/300/400/y/l/h/02e301ce-phpeuihly.jpg')] bg-center bg-cover overflow-hidden hover:scale-110 transition ease-in-out duration-300">
 
-    <div class="group w-[30vh] h-[40vh] border border-zinc-600 shadow-xl hover:shadow-yellow-500/10 bg-[url('https://www.france.tv/image/vignette_3x4/300/400/6/k/r/d8dff669-phpnukrk6.jpg')] bg-center bg-cover overflow-hidden hover:scale-110 transition ease-in-out duration-300">
+    <div class="w-full h-[100%] bg-gradient-to-t from-zinc-900/95 via-zinc-900/75 to-zinc-900/25 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition ease-in-out">
 
-      <div class="w-full h-[100%] bg-gradient-to-t from-zinc-900/95 via-zinc-900/75 to-zinc-900/25 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity ease-in-out">
+      <div class="relative w-full h-[100%]">
 
-        <div class="relative w-full h-[100%] pattern-boxes pattern-yellow-500 pattern-bg-white
-  pattern-size-4 pattern-opacity-10">
+        <div class="absolute bottom-0 left-0 w-full px-4 py-6">
 
-          <div class="absolute bottom-0 left-0 w-full px-4 py-6">
+          <p class="text-white text-[15px] font-bold">Les sprinteurs enfin à l'honneur pour le retour en France ? La troisième étape en questions</p>
 
-            <p class="text-white text-[15px] font-bold">Direct TV - Étape 2 : Vitoria-Gasteiz > San Sebastian</p>
+          <p class="mt-1 text-white text-[12px]">Le peloton de la 110e édition de la Grande Boucle arrive en France, lundi. Après...</p>
 
-            <p class="mt-1 text-white text-[12px]">Deuxième étape du Tour de France 2023, avec une étape espagnole reliant Vitoria-Gasteiz...</p>
+          <p class="mt-1 mb-5 text-gray-300 text-[11px]">Publié le 03/07/23</p>
 
-            <p class="mt-1 mb-5 text-gray-300 text-[11px]">Diffusé le 02/07/23 | 4 h 55 min</p>
-
-            <span class="px-3 py-1 text-zinc-900 text-[14px] bg-white rounded-full">Regarder</span>
-
-          </div>
+          <span class="px-3 py-1 text-zinc-900 text-[14px] bg-white rounded-full">Lire</span>
 
         </div>
 
@@ -512,47 +523,23 @@
 
     </div>
 
-    <div class="group w-[30vh] h-[40vh] border border-zinc-600 shadow-xl hover:shadow-yellow-500/10 bg-[url('https://www.france.tv/image/vignette_3x4/300/400/y/l/h/02e301ce-phpeuihly.jpg')] bg-center bg-cover overflow-hidden hover:scale-110 transition ease-in-out duration-300">
+  </div>
 
-      <div class="w-full h-[100%] bg-gradient-to-t from-zinc-900/95 via-zinc-900/75 to-zinc-900/25 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition ease-in-out">
+  <div class="group w-[30vh] h-[40vh] border border-zinc-600 shadow-xl hover:shadow-yellow-500/10 bg-[url('https://www.france.tv/image/vignette_3x4/300/400/e/e/s/119417fa-phpyt0see.jpg')] bg-center bg-cover overflow-hidden hover:scale-110 transition ease-in-out duration-300">
 
-        <div class="relative w-full h-[100%]">
+    <div class="w-full h-[100%] bg-gradient-to-t from-zinc-900/95 via-zinc-900/75 to-zinc-900/25 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition ease-in-out">
 
-          <div class="absolute bottom-0 left-0 w-full px-4 py-6">
+      <div class="relative w-full h-[100%]">
 
-            <p class="text-white text-[15px] font-bold">Les sprinteurs enfin à l'honneur pour le retour en France ? La troisième étape en questions</p>
+        <div class="absolute bottom-0 left-0 w-full px-4 py-6">
 
-            <p class="mt-1 text-white text-[12px]">Le peloton de la 110e édition de la Grande Boucle arrive en France, lundi. Après...</p>
+          <p class="text-white text-[15px] font-bold">Qui est Victor Lafay, le Français qui a brisé la malédiction de l'équipe Cofidis ?</p>
 
-            <p class="mt-1 mb-5 text-gray-300 text-[11px]">Publié le 03/07/23</p>
+          <p class="mt-1 text-white text-[12px]">Le puncheur a décroché sa première victoire sur le Tour, dimanche, à Saint-Sébastien,...</p>
 
-            <span class="px-3 py-1 text-zinc-900 text-[14px] bg-white rounded-full">Lire</span>
+          <p class="mt-1 mb-5 text-gray-300 text-[11px]">Publié le 02/07/23</p>
 
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-    <div class="group w-[30vh] h-[40vh] border border-zinc-600 shadow-xl hover:shadow-yellow-500/10 bg-[url('https://www.france.tv/image/vignette_3x4/300/400/e/e/s/119417fa-phpyt0see.jpg')] bg-center bg-cover overflow-hidden hover:scale-110 transition ease-in-out duration-300">
-
-      <div class="w-full h-[100%] bg-gradient-to-t from-zinc-900/95 via-zinc-900/75 to-zinc-900/25 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition ease-in-out">
-
-        <div class="relative w-full h-[100%]">
-
-          <div class="absolute bottom-0 left-0 w-full px-4 py-6">
-
-            <p class="text-white text-[15px] font-bold">Qui est Victor Lafay, le Français qui a brisé la malédiction de l'équipe Cofidis ?</p>
-
-            <p class="mt-1 text-white text-[12px]">Le puncheur a décroché sa première victoire sur le Tour, dimanche, à Saint-Sébastien,...</p>
-
-            <p class="mt-1 mb-5 text-gray-300 text-[11px]">Publié le 02/07/23</p>
-
-            <span class="px-3 py-1 text-zinc-900 text-[14px] bg-white rounded-full">Lire</span>
-
-          </div>
+          <span class="px-3 py-1 text-zinc-900 text-[14px] bg-white rounded-full">Lire</span>
 
         </div>
 
@@ -560,18 +547,16 @@
 
     </div>
 
-  </div>-->
+  </div>
 
-  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+</div>
+
+
+
+<script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
-
-  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-  <script>
-    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
-  </script>
-  <script src="https://www.google-analytics.com/analytics.js" async></script>
+<script type="text/javascript" src="js/vanilla-tilt.js"></script>
 
 </body>
 
