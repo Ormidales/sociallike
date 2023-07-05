@@ -67,6 +67,7 @@
         color: white;
         padding: 3px 5px;
         background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(5px);
       }
 
       .card_signs_content svg{
@@ -127,7 +128,7 @@
 
       .card_button p{
         margin: 0;
-        font-family: Poppins, sans-serif;
+        font-family: Inter, sans-serif;
         font-size: 12px;
         color: inherit;
       }
@@ -167,14 +168,14 @@
         }
         to {
           opacity: 1;
-          backdrop-filter: blur(5px);
+          backdrop-filter: blur(2.5px);
         }
       }
 
       @keyframes ANIMATION_CARD_BACKGROUND_OUT {
         from {
           opacity: 1;
-          backdrop-filter: blur(5px);
+          backdrop-filter: blur(2.5px);
         }
         to {
           opacity: 0;
@@ -271,6 +272,8 @@
         -o-transition: opacity .15s ease-in-out;
         transition: opacity .15s ease-in-out;
 
+        backdrop-filter: blur(5px);
+
         display: block;
         font-size: 12px;
         font-family: Inter, sans-serif;
@@ -278,7 +281,7 @@
         background: rgba(0, 0, 0, 0.5);
         padding: 3px 5px;
         color: white;
-        box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.4);
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
         text-align: center;
 
         z-index: 5;
