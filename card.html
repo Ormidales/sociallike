@@ -10,13 +10,13 @@
 
       body{
         margin: 0;
-        padding: 0;
+        padding: 0 0 10vh 0;
+        background: #222222;
       }
 
       .container{
         width: 100%;
-        height: 100vh;
-        background: #222222;
+        padding: 10vh 0 0 0;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -168,14 +168,14 @@
         }
         to {
           opacity: 1;
-          backdrop-filter: blur(2.5px);
+          backdrop-filter: blur(2px);
         }
       }
 
       @keyframes ANIMATION_CARD_BACKGROUND_OUT {
         from {
           opacity: 1;
-          backdrop-filter: blur(2.5px);
+          backdrop-filter: blur(2px);
         }
         to {
           opacity: 0;
@@ -284,7 +284,7 @@
         box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
         text-align: center;
 
-        z-index: 5;
+        z-index: 150;
       }
 
       *[data-tooltip]:hover::after {
@@ -311,10 +311,11 @@
 
           </div>
 
-          <div class="card_signs_content" data-tooltip="Rediffusion disponible au téléchargement">
+          <div class="card_signs_content" data-tooltip="Actuellement en live">
 
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M9 8.25H7.5a2.25 2.25 0 00-2.25 2.25v9a2.25 2.25 0 002.25 2.25h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25H15M9 12l3 3m0 0l3-3m-3 3V2.25" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.91 11.672a.375.375 0 010 .656l-5.603 3.113a.375.375 0 01-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112z" />
             </svg>
 
           </div>
@@ -339,7 +340,7 @@
 
           <div class="card_button">
 
-            <p>Regarder la rediffusion</p>
+            <p>Regarder en live</p>
 
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
               <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" />
@@ -566,6 +567,280 @@
         </div>
 
       </div >
+
+    </div>
+
+    <div class="container">
+
+      <div class="card" style="background-image: url('https://fs-prod-cdn.nintendo-europe.com/media/images/10_share_images/others_3/H2x1_NintendoLogo_Red.png')">
+
+        <div class="card_background"></div>
+
+        <div class="card_signs">
+
+          <div class="card_signs_content" data-tooltip="Disponible en 4K">
+
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
+            </svg>
+
+          </div>
+
+          <div class="card_signs_content" data-tooltip="Rediffusion disponible au téléchargement">
+
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 8.25H7.5a2.25 2.25 0 00-2.25 2.25v9a2.25 2.25 0 002.25 2.25h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25H15M9 12l3 3m0 0l3-3m-3 3V2.25" />
+            </svg>
+
+          </div>
+
+          <div class="card_signs_content" data-tooltip="Documentaire">
+
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 8.25h15m-16.5 7.5h15m-1.8-13.5l-3.9 19.5m-2.1-19.5l-3.9 19.5" />
+            </svg>
+
+          </div>
+
+        </div>
+
+        <div class="card_content">
+
+          <h3>Nintendomination | Épisode 2 - Les studios de développement</h3>
+
+          <p>Dans cet épisode, nous évoquerons et présenteront les différents studios de développement qui composent Nintendo.</p>
+
+          <span>Diffusé le 05/07/23 | 3 h 06 min</span>
+
+          <div class="card_button">
+
+            <p>Regarder en rediffusion</p>
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" />
+            </svg>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="card" style="background-image: url('https://fs-prod-cdn.nintendo-europe.com/media/images/10_share_images/others_3/H2x1_NintendoLogo_Red.png')">
+
+        <div class="card_background"></div>
+
+        <div class="card_signs">
+
+          <div class="card_signs_content" data-tooltip="Disponible en 4K">
+
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
+            </svg>
+
+          </div>
+
+          <div class="card_signs_content" data-tooltip="Rediffusion disponible au téléchargement">
+
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 8.25H7.5a2.25 2.25 0 00-2.25 2.25v9a2.25 2.25 0 002.25 2.25h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25H15M9 12l3 3m0 0l3-3m-3 3V2.25" />
+            </svg>
+
+          </div>
+
+          <div class="card_signs_content" data-tooltip="Documentaire">
+
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 8.25h15m-16.5 7.5h15m-1.8-13.5l-3.9 19.5m-2.1-19.5l-3.9 19.5" />
+            </svg>
+
+          </div>
+
+        </div>
+
+        <div class="card_content">
+
+          <h3>Nintendomination | Épisode 1 - Les consoles de jeux</h3>
+
+          <p>Dans cet épisode, nous évoquerons et présenteront les différentes consoles de jeux qui composent Nintendo.</p>
+
+          <span>Diffusé le 05/07/23 | 3 h 06 min</span>
+
+          <div class="card_button">
+
+            <p>Regarder en rediffusion</p>
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" />
+            </svg>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="card" style="background-image: url('https://xboxsquad.fr/wp-content/uploads/2023/03/18f8103546d0afdf2cceeb8a07dd3a84e5840e0004e7bc822c287f7a6396311f.jpeg')">
+
+        <div class="card_background"></div>
+
+        <div class="card_signs">
+
+          <div class="card_signs_content" data-tooltip="Disponible en 4K">
+
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
+            </svg>
+
+          </div>
+
+          <div class="card_signs_content" data-tooltip="Rediffusion disponible au téléchargement">
+
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 8.25H7.5a2.25 2.25 0 00-2.25 2.25v9a2.25 2.25 0 002.25 2.25h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25H15M9 12l3 3m0 0l3-3m-3 3V2.25" />
+            </svg>
+
+          </div>
+
+          <div class="card_signs_content" data-tooltip="Documentaire">
+
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 8.25h15m-16.5 7.5h15m-1.8-13.5l-3.9 19.5m-2.1-19.5l-3.9 19.5" />
+            </svg>
+
+          </div>
+
+        </div>
+
+        <div class="card_content">
+
+          <h3>BUGBISOFT | Épisode 3 - 2018 à maintenant</h3>
+
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+          <span>Diffusé le 05/07/23 | 3 h 25 min</span>
+
+          <div class="card_button">
+
+            <p>Regarder en rediffusion</p>
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" />
+            </svg>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="card" style="background-image: url('https://xboxsquad.fr/wp-content/uploads/2023/03/18f8103546d0afdf2cceeb8a07dd3a84e5840e0004e7bc822c287f7a6396311f.jpeg')">
+
+        <div class="card_background"></div>
+
+        <div class="card_signs">
+
+          <div class="card_signs_content" data-tooltip="Disponible en 4K">
+
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
+            </svg>
+
+          </div>
+
+          <div class="card_signs_content" data-tooltip="Rediffusion disponible au téléchargement">
+
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 8.25H7.5a2.25 2.25 0 00-2.25 2.25v9a2.25 2.25 0 002.25 2.25h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25H15M9 12l3 3m0 0l3-3m-3 3V2.25" />
+            </svg>
+
+          </div>
+
+          <div class="card_signs_content" data-tooltip="Documentaire">
+
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 8.25h15m-16.5 7.5h15m-1.8-13.5l-3.9 19.5m-2.1-19.5l-3.9 19.5" />
+            </svg>
+
+          </div>
+
+        </div>
+
+        <div class="card_content">
+
+          <h3>BUGBISOFT | Épisode 2 - 2012 à 2017</h3>
+
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+          <span>Diffusé le 05/07/23 | 4 h 36 min</span>
+
+          <div class="card_button">
+
+            <p>Regarder en rediffusion</p>
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" />
+            </svg>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="card" style="background-image: url('https://xboxsquad.fr/wp-content/uploads/2023/03/18f8103546d0afdf2cceeb8a07dd3a84e5840e0004e7bc822c287f7a6396311f.jpeg')">
+
+        <div class="card_background"></div>
+
+        <div class="card_signs">
+
+          <div class="card_signs_content" data-tooltip="Disponible en 4K">
+
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
+            </svg>
+
+          </div>
+
+          <div class="card_signs_content" data-tooltip="Rediffusion disponible au téléchargement">
+
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 8.25H7.5a2.25 2.25 0 00-2.25 2.25v9a2.25 2.25 0 002.25 2.25h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25H15M9 12l3 3m0 0l3-3m-3 3V2.25" />
+            </svg>
+
+          </div>
+
+          <div class="card_signs_content" data-tooltip="Documentaire">
+
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 8.25h15m-16.5 7.5h15m-1.8-13.5l-3.9 19.5m-2.1-19.5l-3.9 19.5" />
+            </svg>
+
+          </div>
+
+        </div>
+
+        <div class="card_content">
+
+          <h3>BUGBISOFT | Épisode 1 - 1986 à 2011</h3>
+
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+          <span>Diffusé le 05/07/23 | 2 h 14 min</span>
+
+          <div class="card_button">
+
+            <p>Regarder en rediffusion</p>
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" />
+            </svg>
+
+          </div>
+
+        </div>
+
+      </div>
 
     </div>
 
